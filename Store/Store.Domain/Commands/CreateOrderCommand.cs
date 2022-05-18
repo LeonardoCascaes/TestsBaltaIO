@@ -28,7 +28,7 @@ namespace Store.Domain.Commands
         {
             AddNotifications(new Contract()
                 .Requires()
-                .IsNotNullOrWhiteSpace(Customer, "Customer", "Cliente inválido")
+                .HasLen(Customer, 11, "Customer", "Cliente inválido")
                 .HasLen(ZipCode, 8, "ZipCode", "CEP inválido")
                 );
         }

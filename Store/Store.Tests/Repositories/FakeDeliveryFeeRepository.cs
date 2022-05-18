@@ -6,7 +6,10 @@ namespace Store.Tests.Repositories
     {
         public decimal Get(string zipCode)
         {
-            return 10;
+            if(zipCode == "12345678")
+                return 10;
+
+            return 0;
         }
     }
 }
